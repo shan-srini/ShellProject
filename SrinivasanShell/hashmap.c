@@ -61,9 +61,9 @@ free_pair(hashmap_pair* hp)
 void
 free_hashmap(hashmap* hh)
 {
-    //for(int i = 0; i<hh->capacity; ++i) {
-      // free_pair(hh->data[i]);
-    //}
+    for(int i = 0; i<hh->capacity; ++i) {
+       free_pair(hh->data[i]);
+    }
     free(hh->data);
     free(hh);
 }
